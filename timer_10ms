@@ -1,0 +1,22 @@
+#include <iostream>
+#include <chrono>
+
+int main() {
+    // Démarre le temporisateur
+    auto start_time = std::chrono::steady_clock::now();
+    auto diff_boucle = start_time - start_time;
+
+    // condition de 10 millisecondes
+    while (std::chrono::duration <double, std::milli> (diff_boucle).count() <= 9 ) {
+        auto current_time = std::chrono::steady_clock::now();
+
+        //votre code
+
+        auto end_time = std::chrono::steady_clock::now();
+        auto diff_boucle = end_time - current_time;
+        
+    }
+    // return un rand pour le coup si on sort du while 
+
+    return 0;
+}
